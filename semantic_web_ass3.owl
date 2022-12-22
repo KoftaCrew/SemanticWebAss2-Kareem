@@ -1,0 +1,1009 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#"
+     xml:base="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:airports="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#compatible_with -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#compatible_with">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Gate"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Aircraft_type"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#has_on_it -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#has_on_it">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#positioned_on"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Ground_surface"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Aircraft"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#have -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#have">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#have_exit -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#have_exit">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#have"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Runway"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Taxiway"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#have_field -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#have_field">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#have"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Airport"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Airfield"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#have_gate -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#have_gate">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#have"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Airfield"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Gate"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#have_ground_surface -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#have_ground_surface">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#have"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Airfield"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Ground_surface"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#have_runway -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#have_runway">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#have_ground_surface"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Airfield"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Runway"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#have_taxiway -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#have_taxiway">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#have_ground_surface"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Airfield"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Taxiway"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#manufactured_by -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#manufactured_by">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#ManufactueredThing"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Manufacturer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#positioned_on -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#positioned_on">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Aircraft"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Ground_surface"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#type -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#type">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Aircraft"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Aircraft_type"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#capacity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#capacity">
+        <owl:equivalentProperty rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#passengers&apos;_capacity"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Aircraft"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Gate"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#class -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#class">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Aircraft"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#class"/>
+                        <owl:hasValue>narrow body</owl:hasValue>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#class"/>
+                        <owl:hasValue>wide body</owl:hasValue>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#elevation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#elevation">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Airfield"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#engine-count -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#engine-count">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Aircraft"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#gate_number -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#gate_number">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Gate"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#ground_type -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#ground_type">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Runway"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#ground_type"/>
+                        <owl:hasValue>Asphalt</owl:hasValue>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#ground_type"/>
+                        <owl:hasValue>Grass</owl:hasValue>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#id -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#id">
+        <owl:equivalentProperty rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#id_number"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Aircraft"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Airfield"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#id_number -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#id_number">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Aircraft"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Airfield"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#length -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#length">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Runway"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#maintenance_status -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#maintenance_status">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Taxiway"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#maintenance_status"/>
+                        <owl:hasValue>locked</owl:hasValue>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#maintenance_status"/>
+                        <owl:hasValue>open</owl:hasValue>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#max-speed -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#max-speed">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Aircraft"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#name">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#NamedThing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#usage_type -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#usage_type">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Airfield"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#usage_type"/>
+                        <owl:hasValue>Charter</owl:hasValue>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#usage_type"/>
+                        <owl:hasValue>Civilian</owl:hasValue>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#usage_type"/>
+                        <owl:hasValue>Military</owl:hasValue>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#passengers&apos;_capacity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#passengers&apos;_capacity">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Aircraft"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Gate"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Air_traffic_controller_tower -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Air_traffic_controller_tower"/>
+    
+
+
+    <!-- http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Aircraft -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Aircraft">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#ManufactueredThing"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#NamedThing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#manufactured_by"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Manufacturer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#positioned_on"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Ground_surface"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#class"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#id"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#max-speed"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Aircraft_type -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Aircraft_type">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#ManufactueredThing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Airfield -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Airfield">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#elevation"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#id"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#usage_type"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Airport -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Airport">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#NamedThing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#have"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Air_traffic_controller_tower"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#have"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Maintenance_shop"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#have"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Passengers&apos;_terminals"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#have_field"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Airfield"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Gate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Gate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#NamedThing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#compatible_with"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Aircraft_type"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#capacity"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#gate_number"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Ground_surface -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Ground_surface">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#NamedThing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Maintenance_shop -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Maintenance_shop"/>
+    
+
+
+    <!-- http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#ManufactueredThing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#ManufactueredThing">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Manufacturer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Manufacturer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Manufacturer"/>
+    
+
+
+    <!-- http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#NamedThing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#NamedThing">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#name"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Runway -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Runway">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Ground_surface"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#have_exit"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Taxiway"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#ground_type"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#length"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Taxiway"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Taxiway -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Taxiway">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Ground_surface"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#maintenance_status"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Passengers&apos;_terminals -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Passengers&apos;_terminals"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#A -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#A">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Taxiway"/>
+        <maintenance_status>open</maintenance_status>
+        <name>A</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#A1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#A1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Gate"/>
+        <compatible_with rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Airbus_A320"/>
+        <compatible_with rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Airbus_A330"/>
+        <compatible_with rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Airbus_A380"/>
+        <capacity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">350</capacity>
+        <gate_number>A1</gate_number>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#A2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#A2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Gate"/>
+        <compatible_with rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Airbus_A330"/>
+        <compatible_with rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Airbus_A380"/>
+        <capacity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">300</capacity>
+        <name>A2</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Airbus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Airbus">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Manufacturer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Airbus_A320 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Airbus_A320">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Aircraft_type"/>
+        <manufactured_by rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Airbus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Airbus_A330 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Airbus_A330">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Aircraft_type"/>
+        <manufactured_by rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Airbus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Airbus_A380 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Airbus_A380">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Aircraft_type"/>
+        <manufactured_by rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Airbus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Alamaza_Airport -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Alamaza_Airport">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Airport"/>
+        <have_field rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#HELA"/>
+        <name>Almaza Airport</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#B -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#B">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Taxiway"/>
+        <maintenance_status>locked</maintenance_status>
+        <name>B</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#B1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#B1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Gate"/>
+        <compatible_with rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Boeing737"/>
+        <compatible_with rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Boeing767"/>
+        <compatible_with rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Boeing787"/>
+        <capacity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</capacity>
+        <name>B1</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#B2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#B2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Gate"/>
+        <compatible_with rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Airbus_A320"/>
+        <capacity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">300</capacity>
+        <name>B2</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Boeing -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Boeing">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Manufacturer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Boeing737 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Boeing737">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Aircraft_type"/>
+        <manufactured_by rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Boeing"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Boeing767 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Boeing767">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Aircraft_type"/>
+        <manufactured_by rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Boeing"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Boeing787 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Boeing787">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Aircraft_type"/>
+        <manufactured_by rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Boeing"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#C1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#C1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Gate"/>
+        <compatible_with rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Boeing787"/>
+        <capacity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</capacity>
+        <name>C1</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#CAI -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#CAI">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Airfield"/>
+        <have_gate rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#B1"/>
+        <have_gate rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#B2"/>
+        <have_gate rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#C1"/>
+        <have_runway rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#02E"/>
+        <have_runway rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#06D"/>
+        <have_taxiway rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#B"/>
+        <have_taxiway rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#K"/>
+        <elevation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">300</elevation>
+        <id>CAI</id>
+        <usage_type>Civilian</usage_type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Cairo_International_Airport -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Cairo_International_Airport">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Airport"/>
+        <have_field rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#CAI"/>
+        <name>Cairo International Airport</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#HELA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#HELA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Airfield"/>
+        <have_gate rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#A1"/>
+        <have_gate rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#A2"/>
+        <have_runway rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#05C"/>
+        <have_runway rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#14D"/>
+        <have_taxiway rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#A"/>
+        <have_taxiway rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#M"/>
+        <elevation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200</elevation>
+        <id>HELA</id>
+        <usage_type>Military</usage_type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#K -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#K">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Taxiway"/>
+        <maintenance_status>open</maintenance_status>
+        <name>K</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#KMN20 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#KMN20">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Aircraft"/>
+        <manufactured_by rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Airbus"/>
+        <positioned_on rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#05C"/>
+        <type rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Airbus_A380"/>
+        <capacity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">300</capacity>
+        <class>wide body</class>
+        <engine-count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</engine-count>
+        <id_number>KMN20</id_number>
+        <max-speed rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000</max-speed>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#M -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#M">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Taxiway"/>
+        <maintenance_status>locked</maintenance_status>
+        <name>M</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#SKU10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#SKU10">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Aircraft"/>
+        <manufactured_by rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Airbus"/>
+        <positioned_on rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#05C"/>
+        <type rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Airbus_A330"/>
+        <capacity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200</capacity>
+        <class>wide body</class>
+        <engine-count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</engine-count>
+        <id_number>SKU10</id_number>
+        <max-speed rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">900</max-speed>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#STU30 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#STU30">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Aircraft"/>
+        <manufactured_by rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Boeing"/>
+        <positioned_on rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#06D"/>
+        <type rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Boeing737"/>
+        <capacity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</capacity>
+        <class>narrow body</class>
+        <engine-count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</engine-count>
+        <id_number>STU30</id_number>
+        <max-speed rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">800</max-speed>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#UWD20 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#UWD20">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Aircraft"/>
+        <manufactured_by rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Boeing"/>
+        <positioned_on rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#K"/>
+        <type rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Boeing787"/>
+        <capacity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</capacity>
+        <class>narrow body</class>
+        <engine-count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</engine-count>
+        <id_number>UWD20</id_number>
+        <max-speed rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000</max-speed>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#02E -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#02E">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Runway"/>
+        <have_exit rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#K"/>
+        <ground_type>Asphalt</ground_type>
+        <length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2000</length>
+        <name>02E</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#05C -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#05C">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Runway"/>
+        <have_exit rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#M"/>
+        <ground_type>Grass</ground_type>
+        <length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1200</length>
+        <name>05C</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#06D -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#06D">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Runway"/>
+        <have_exit rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#B"/>
+        <ground_type>Asphalt</ground_type>
+        <length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1200</length>
+        <name>06D</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#14D -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#14D">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Runway"/>
+        <have_exit rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#A"/>
+        <ground_type>Asphalt</ground_type>
+        <length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1500</length>
+        <name>14D</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Air_traffic_controller_tower"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Aircraft"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Aircraft_type"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Airfield"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Airport"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Gate"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Ground_surface"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Maintenance_shop"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Manufacturer"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Passengers&apos;_terminals"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
