@@ -255,17 +255,18 @@ David Emad Philip Ata-Allah, ID: 20190191, Group: CS-S6, Program: CS</rdfs:comme
     <!-- http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#id -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#id">
-        <owl:equivalentProperty rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#id_number"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Aircraft"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Airfield"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Airfield"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:maxLength rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</xsd:maxLength>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
     </owl:DatatypeProperty>
     
 
@@ -274,14 +275,7 @@ David Emad Philip Ata-Allah, ID: 20190191, Group: CS-S6, Program: CS</rdfs:comme
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#id_number">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Aircraft"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Airfield"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#Aircraft"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -431,7 +425,7 @@ David Emad Philip Ata-Allah, ID: 20190191, Group: CS-S6, Program: CS</rdfs:comme
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#id"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/kareemmorsy/ontologies/2022/11/airports#id_number"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
